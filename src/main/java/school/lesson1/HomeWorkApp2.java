@@ -11,5 +11,7 @@ public class HomeWorkApp2 {
             System.out.println("Banana");
             System.out.println("Apple");
         }
+
     }
+
 }
