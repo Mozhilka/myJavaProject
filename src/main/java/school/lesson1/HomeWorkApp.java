@@ -1,10 +1,17 @@
 package school.lesson1;
 
-public class Test2 {
+public class HomeWorkApp {
     public static void main(String[] args) {
+        printThreeWords();
         printColor();
         checkSumSign();
         compareNumbers();
+    }
+
+    public static void printThreeWords() {
+        System.out.println("Orange");
+        System.out.println("Banana");
+        System.out.println("Apple");
     }
 
     public static void printColor() {
