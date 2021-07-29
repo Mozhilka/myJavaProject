@@ -2,16 +2,39 @@ package school.lesson2;
 
 public class Test2 {
     public static void main(String[] args) {
-         int a = 5;
-         int b = 10;
-            boolean summe = true;
-            if ( a + b > 10 && a+b <= 20);
+        check(5,10);
+        positiveOrNegative(2);
+        isNegative(2);
+        printWordNTimes( "Hi",5);
+    }
 
-            else {
-                summe = false;
-            }
+    public static void positiveOrNegative(int j) {
+
+        if (j >= 0) {
+            System.out.println("Положительное");
+        } else {
+            System.out.println("Отрицательное");
+        }
     }
-    public static boolean positiveOrNegative(int num) {
-        return num >= 0;
+
+    public static boolean check(int a, int b) {
+
+    int s =a + b;
+        return (10 <= s) && (s <= 20);
     }
+    public static boolean isNegative(int number) {
+        return number < 0;
+    }
+    public static void printWordNTimes(String word, int times) {
+        for (int l=0; l<5; l++ ) {
+            System.out.println("Hello");
+        }
+
+        }
 }
+
+
+
+
+
+
