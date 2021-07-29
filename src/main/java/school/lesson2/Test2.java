@@ -5,7 +5,8 @@ public class Test2 {
         check(5,10);
         positiveOrNegative(2);
         isNegative(2);
-        printWordNTimes( "Hi",5);
+        printWordNTimes( "Hello",5);
+        doSeven(2021);
     }
 
     public static void positiveOrNegative(int j) {
@@ -31,6 +32,10 @@ public class Test2 {
         }
 
         }
+    public static void doSeven(int year) {
+        if (!(year % 4 == 0) || ((year % 100 == 0) && !(year % 400 == 0))) System.out.println(year + " г. не високосный");
+        else System.out.println(year + " г. високосный");
+    }
 }
 
 
