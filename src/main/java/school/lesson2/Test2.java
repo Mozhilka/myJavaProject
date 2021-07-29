@@ -5,10 +5,13 @@ public class Test2 {
          int a = 5;
          int b = 10;
             boolean summe = true;
-            if ( a + b > 10 && a+b <= 20)
-                System.out.println ("true");
+            if ( a + b > 10 && a+b <= 20);
+
             else {
                 summe = false;
             }
+    }
+    public static boolean positiveOrNegative(int num) {
+        return num >= 0;
     }
 }
