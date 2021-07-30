@@ -32,8 +32,7 @@ public class HomeWorkApp {
         if (c >= 0) {
             System.out.println("Сумма положительная");
         }
-
-        if (a - b < 0) {
+        else {
             System.out.println("- Сумма отрицательная");
         }
     }
