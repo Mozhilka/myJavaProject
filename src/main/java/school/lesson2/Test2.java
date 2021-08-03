@@ -23,6 +23,9 @@ public class Test2 {
         }
     }
 
+    /**
+     * Написать метод, принимающий на вход два целых числа и проверяющий, что их сумма лежит в пределах от 10 до 20 (включительно), если да – вернуть true, в противном случае – false.
+     */
     public static boolean check(int a, int b) {
 
         int s = a + b;
@@ -48,33 +51,37 @@ public class Test2 {
 
     static void changeArray() {
         int[] arr = new int[]{1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
-        System.out.print("BEFORE: ");
+        System.out.println("BEFORE: ");
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
             if (arr[i] == 0) arr[i] = 1;
             else arr[i] = 0;
 
         }
-        System.out.print("\nAFTER:  ");
+        System.out.println("\nAFTER:  ");
         for (int i : arr) {
             System.out.print(i + " ");
         }
+        System.out.println();
     }
+
     static void changeArray2() {
         int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
 
-        System.out.print("BEFORE: ");
+        System.out.println("BEFORE: ");
         for (int i : arr) {
             System.out.print(i + " ");
         }
 
-        System.out.print("\nAFTER:  ");
+        System.out.println("\nAFTER:  ");
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] < 6) arr[i] *= 2;
             System.out.print(arr[i] + " ");
         }
+        System.out.println();
     }
-    static void fillDiagonal() {
+
+    public static void fillDiagonal() {
         int[][] sqrArray = new int[4][4];
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
