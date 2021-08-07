@@ -1,14 +1,12 @@
 package school.lesson4;
+    class Dog extends Animal {
 
-public class Dog extends Animal {
-    public void run() {
-        System.out.println("Dog is running");
-    }
-    public void swim() {
-        System.out.println("Dog is swims");
-    }
-    public void showName(){
-        System.out.println(name);
+    Dog(double animalDistanceRun, double animalDistanceSwim) {
+        super(animalDistanceRun, animalDistanceSwim);
     }
 
-}
+        @Override
+        public boolean run(double value) {
+            return false;
+        }
+    }

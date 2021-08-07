@@ -1,4 +1,14 @@
 package school.lesson4;
 
-public class Cat extends Animal {
-}
+    class Cat extends Animal {
+
+        Cat(double animalDistanceRun, double animalDistanceSwim) {
+            super(animalDistanceRun, animalDistanceSwim);
+        }
+
+        @Override
+        public boolean run(double value) {
+            return false;
+        }
+    }
+

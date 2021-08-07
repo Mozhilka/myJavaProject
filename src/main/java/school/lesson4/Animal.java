@@ -1,16 +1,22 @@
 package school.lesson4;
+public abstract class Animal implements AnimalInterface {
+    private double animalDistanceRun, animalDistanceSwim;
 
-public class Animal {
-
-    String name;
-    int age;
-
-    public void run() {
-        System.out.println("Animal running");
-
-    }
-    public void swim() {
-        System.out.println("Animal swims");
+    Animal(double animalDistanceRun, double animalDistanceSwim) {
+        this.animalDistanceRun = animalDistanceRun;
+        this.animalDistanceSwim = animalDistanceSwim;
     }
 
+    @Override
+    public boolean swim(double value) {
+        return animalDistanceSwim > value;
+    }
+
+    double getAnimalDistanceRun() {
+        return animalDistanceRun;
+    }
+
+    double getAnimalDistanceSwim() {
+        return animalDistanceSwim;
+    }
 }
