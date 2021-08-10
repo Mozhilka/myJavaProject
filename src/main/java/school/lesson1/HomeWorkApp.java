@@ -32,14 +32,15 @@ public class HomeWorkApp {
         if (c >= 0) {
             System.out.println("Сумма положительная");
         }
-        else {
+
+        if (a - b < 0) {
             System.out.println("- Сумма отрицательная");
         }
     }
 
     public static void compareNumbers() {
-            int a = 1;
-            int b = 2;
+            int a = 2;
+            int b = 1;
 
             if (a >= b) {
                 System.out.println("a >= b");
