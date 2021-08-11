@@ -1,22 +1,19 @@
 package school.lesson4;
-public abstract class Animal implements AnimalInterface {
-    private double animalDistanceRun, animalDistanceSwim;
+class Animal {
+    // здесь задаем одинаковые типы данных для всех животных, индивидуальные навыки(типы данных) задаются в классе для конкретного животного
 
-    Animal(double animalDistanceRun, double animalDistanceSwim) {
-        this.animalDistanceRun = animalDistanceRun;
-        this.animalDistanceSwim = animalDistanceSwim;
+    public String name;
+    public int run;
+
+    public Animal() {
     }
 
-    @Override
-    public boolean swim(double value) {
-        return animalDistanceSwim > value;
+    public Animal(String name) {
+        this.name = name;
     }
 
-    double getAnimalDistanceRun() {
-        return animalDistanceRun;
-    }
+    public void animalInfo() {
+        System.out.println();
 
-    double getAnimalDistanceSwim() {
-        return animalDistanceSwim;
     }
 }

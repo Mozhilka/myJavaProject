@@ -8,8 +8,13 @@ public class Test2 {
         printWordNTimes("Hello", 5);
         doYear(2021);
         changeArray();
+        createArray();
         changeArray2();
         fillDiagonal();
+        findMininalAndMaximalElementOfArray();
+        System.out.println(checkBalance(new int[] { 1, 1, 1, 2, 1 })); // true
+        System.out.println(checkBalance(new int[] { 2, 1, 1, 2, 1 })); // false
+        System.out.println(checkBalance(new int[] { 10, 10 })); //true
 
     }
 
@@ -93,9 +98,12 @@ public class Test2 {
      * Задать пустой целочисленный массив длиной 100. С помощью цикла заполнить его значениями
      * 1 2 3 4 5 6 7 8 … 100;
      */
-    public static void createArr(int[] array, int step, int shift){
-        for(int i = 0; i < 100; i ++){
-            array[i] = shift + i * step;
+    static void createArray() {
+        int[] arr = new int[100];
+
+        for (int i = 0, j = 0; i < arr.length; i++, j += 1) {
+            arr[i] = j;
+            System.out.print(arr[i] + " ");
         }
     }
     /**
@@ -138,23 +146,46 @@ public class Test2 {
     /**
      * Задать одномерный массив и найти в нем минимальный и максимальный элементы
      */
-    public static int minInArray(int[] array){
-        int min = array[0];
-        for(int i = 0; i < array.length; i++){
-            if (min > array[i])
-                min = array[i];
+    static void findMininalAndMaximalElementOfArray() {
+        int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1, -8};
+        int min = arr[0];
+        int max = arr[0];
+        System.out.print("in array: ");
+        for (int i : arr) {
+            System.out.print(i + " ");
         }
-        return min;
+
+        for (int i = 0; i < arr.length; i++) {
+            min = Math.min(min, arr[i]);
+            max = Math.max(max, arr[i]);
+        }
+        System.out.println("\nminimal element is: " + min + "\nmaximal element is: " + max);
     }
-    public static int maxInArray(int[] array){
-        int max = array[0];
-        for(int i = 0; i < array.length; i++){
-            if (max < array[i])
-                max = array[i];
+    /**
+     * Написать метод, в который передается не пустой одномерный целочисленный массив, метод должен вернуть true,
+     * если в массиве есть место, в котором сумма левой и правой части массива равны.
+     */
+    static boolean checkBalance(int[] arr) {
+        int leftSum = 0, rightSum = 0;
+
+        for (int i = 0; i < arr.length + 1; i++) {
+            leftSum = 0;
+            rightSum = 0;
+
+            for (int j = 0; j < i; j++) {
+                leftSum += arr[j];
+            }
+
+            for (int j = i; j < arr.length; j++) {
+                rightSum += arr[j];
+            }
+
+            if (leftSum == rightSum) return true;
         }
-        return max;
+        return false;
     }
 }
+
 
 
 
