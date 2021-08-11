@@ -6,7 +6,7 @@ class Cat extends Animal {
     protected boolean sweem;
     int run;
 
-//konstruktor Cat
+//конструктор Cat
 
     public Cat(String name, int run, boolean sweem ) {
         this.name = name;
@@ -15,7 +15,7 @@ class Cat extends Animal {
 
     }
 
-    //выводим информацию в консоль
+
     public void catInfo() {
         System.out.println("CatName: " + name + " /RunLimit: " + run+ " meters/" + " /Sweem:" + sweem );
     }

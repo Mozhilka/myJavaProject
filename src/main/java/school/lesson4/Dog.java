@@ -6,7 +6,7 @@ class Dog extends Animal {
     public double run;
     public int sweem;
 
-    //konstruktor
+
 
     public Dog(String name, int run, int sweem ) {
         this.name = name;
