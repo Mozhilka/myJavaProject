@@ -88,6 +88,16 @@ public class Test2 {
         }
         System.out.println();
     }
+
+    /**
+     * Задать пустой целочисленный массив длиной 100. С помощью цикла заполнить его значениями
+     * 1 2 3 4 5 6 7 8 … 100;
+     */
+    public static void createArr(int[] array, int step, int shift){
+        for(int i = 0; i < 100; i ++){
+            array[i] = shift + i * step;
+        }
+    }
     /**
      * Задать массив [ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ] пройти по нему циклом, и числа меньшие 6 умножить
      * на 2
@@ -123,6 +133,26 @@ public class Test2 {
             }
             System.out.println();
         }
+    }
+
+    /**
+     * Задать одномерный массив и найти в нем минимальный и максимальный элементы
+     */
+    public static int minInArray(int[] array){
+        int min = array[0];
+        for(int i = 0; i < array.length; i++){
+            if (min > array[i])
+                min = array[i];
+        }
+        return min;
+    }
+    public static int maxInArray(int[] array){
+        int max = array[0];
+        for(int i = 0; i < array.length; i++){
+            if (max < array[i])
+                max = array[i];
+        }
+        return max;
     }
 }
 
