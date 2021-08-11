@@ -156,8 +156,8 @@ public class Test2 {
         }
 
         for (int i = 0; i < arr.length; i++) {
-            min = (min < arr[i]) ? min : arr[i];
-            max = (max > arr[i]) ? max : arr[i];
+            min = Math.min(min, arr[i]);
+            max = Math.max(max, arr[i]);
         }
         System.out.println("\nminimal element is: " + min + "\nmaximal element is: " + max);
     }
